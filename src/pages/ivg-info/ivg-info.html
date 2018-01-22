@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-navbar class="menu">
+    <ion-buttons class="buttonIon" start>
+      <button ion-button menuToggle>
+<img class="icoM" src="assets/icon/menu.png">
+            
+
+      </button>
+    </ion-buttons>
+
+  <ion-title class="headerTitle">CicoLite</ion-title>
+  
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+<ion-slides>
+<ion-slide>
+<div *ngIf="result >= 1">
+<div class="form-wrapper" *ngIf="result >= 1 && pregnant == 1" >
+			<h3>Vous avez plusieurs possibilitées :</h3>
+			<p> - Continuer votre grossesse et accueillir l'enfant.<br/>
+			 - Continuer votre grossesse et confier l'enfant à l'adoption.<br/>
+			 - Interrompre votre grossesse</p>
+				<p>
+				<i>Prenez le temps de la réflexion. </i>
+				<i>Parlez à votre médecin et renseignez-vous sur: </i>
+				<br/>
+				<a href="http://ivg.org">
+					IVG.org
+				</a>
+				<br/>
+				<a href="http://www.adoption.gouv.fr/">
+					adoption.gouv
+				</a>
+			</p>
+			<p><b>L'ivg reste possible pendant encore  {{result}} semaines.</b></p>
+		
+			<button class="button button--line prev-button touch" (click)="nextBegin()">Recommencer</button>
+	</div>
+</div>
+	<div class="form-wrapper" *ngIf="result < 0 && pregnant == 1">
+
+				<h3>Le delai d'avortement légal est dépassé</h3> 
+				<p><b>Vous avez plusieurs possibilitées :</b></p>
+			<p> - Continuer votre grossesse et accueillir l'enfant.<br/>
+			 - Continuer votre grossesse et confier l'enfant à l'adoption.</p>
+				<p>
+				<i>Prenez le temps de la réflexion. </i>
+				<i>Parlez à votre médecin et renseignez-vous sur: </i>
+				<br/>
+				<a href="http://www.adoption.gouv.fr/">
+					adoption.gouv
+				</a>
+			</p>
+			<button class="button button--line prev-button touch" (click)="nextBegin()">Recommencer</button>
+	</div>
+	<div class="form-wrapper" *ngIf="pregnant == 2 && datetest < 0">
+
+				<h3>Réalisez un test de grossesse</h3> 
+				<p><b>D'après la date de vos dernières règles le test de grossesse peut être fait à partir de maintenant</b></p>
+
+			<button class="button button--line prev-button touch" (click)="nextBegin()">Recommencer</button>
+	</div>
+	<div class="form-wrapper" *ngIf="pregnant == 2 && datetest > 0">
+
+				<h3>Réalisez un test de grossesse</h3> 
+				<p><b>D'après la date de vos dernières règles, vosu pourrez réaliser un test de grossesse d'ici {{datetest}} jours.</b></p>
+				<p>Si vous réalisez un test de grossesse avant cette date celui-ci ne sera pas fiable et peut vous donner un faux négatif</p>
+
+			<button class="button button--line prev-button touch" (click)="nextBegin()">Recommencer</button>
+	</div>
+	</ion-slide>
+	    
+        </ion-slides>
+</ion-content>

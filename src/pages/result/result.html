@@ -1,0 +1,93 @@
+<ion-header>
+  <ion-navbar class="menu">
+    <ion-buttons class="buttonIon" start>
+      <button ion-button icon-only menuToggle>
+<img class="icoM" src="assets/icon/menu.png">
+            
+
+      </button>
+    </ion-buttons>
+
+  <ion-title class="headerTitle">CicoLite</ion-title>
+  
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="result-info visible" >
+    <label>Résultats</label>
+  </div>
+  <ion-slides *ngIf='Questions[28].answerUser != -1' pager>
+
+    <ion-slide *ngIf='Questions[28].answerUser != -1'>
+      <div class="welcome">
+               <div class="slide-wrapper welcome-wrapper">
+          <div [ngClass]="{'visible': activeWelcomeContent, 'welcome-content': true }">
+            <h4 [innerHtml]="riskAssessment"></h4>
+
+            <div class="infoContent"  *ngIf="resultRisk >= 20">
+              <div class="helpInfo">
+                <img class="helpIco" src="assets/icon/help.png" (click)="alertInfo()">
+              </div>
+              <p (click)="alertInfo()">Quels sont les différent types de maternité</p>
+            </div>
+          <div class="swipe-helper"><i class="icon icon-fingers-scroll-horizontal"></i></div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </ion-slide>
+    <ion-slide  *ngFor="let answer of answers" >
+      <div>
+       <h1 class="risk" [innerHtml]="answer.risk"></h1> 
+       <br/>
+       <h1 class="conseil" [innerHtml]="answer.conseil"></h1>      
+       <br/>
+       <h1 class="positif" [innerHtml]="answer.positif"></h1>
+     </div>
+   </ion-slide>
+   <ion-slide class="positif" *ngIf='Questions[28].answerUser != -1'>
+    <h1>Et voilà !</h1>
+    <p>Pour recommencer, cliquez sur le bouton juste en dessous</p>
+    <button class="button touch" (click)="nextBegin()">Recommencer</button>
+  </ion-slide>
+   <ion-slide class="positif" *ngIf='Questions[28].answerUser == -1'>
+    <h1>Remplissez le questionnaire !</h1>
+    <p>Nous avons besoin de toutes les informations vous concernant pour établir votre profil de risque et vous conseiller au mieux</p>
+    <button class="button touch" (click)="nextBegin()">Commencer</button>
+  </ion-slide>
+
+</ion-slides>
+<ion-slides *ngIf='Questions[28].answerUser == -1' pager>
+
+    <ion-slide *ngIf='Questions[28].answerUser != -1'>
+      <div class="welcome">
+        <div class="slide-wrapper welcome-wrapper">
+          <div [ngClass]="{'visible': activeWelcomeContent, 'welcome-content': true }">
+            <h4 [innerHtml]="riskAssessment"></h4>
+
+            <div class="infoContent"  *ngIf="resultRisk >= 20">
+              <div class="helpInfo">
+                {{resultRisk}}
+                <img class="helpIco" src="assets/icon/help.png" (click)="alertInfo()">
+              </div>
+              <p (click)="alertInfo()">Quels sont les différent types de maternité</p>
+            </div>
+          <div class="swipe-helper"><i class="icon icon-fingers-scroll-horizontal"></i></div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </ion-slide>
+    <ion-slide class="positif" *ngIf='Questions[28].answerUser == -1'>
+    <h1>Remplissez le questionnaire !</h1>
+    <p>Nous avons besoin de toutes les informations vous concernant pour établir votre profil de risque et vous conseiller au mieux</p>
+    <button class="button touch" (click)="nextBegin()">Commencer</button>
+  </ion-slide>
+
+</ion-slides>
+</ion-content>

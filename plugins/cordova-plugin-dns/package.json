@@ -1,0 +1,55 @@
+{
+  "_from": "cordova-plugin-dns",
+  "_id": "cordova-plugin-dns@1.0.2",
+  "_inBundle": false,
+  "_integrity": "sha1-T/wB07PA6Hn6nkkh7fIsb28wZnE=",
+  "_location": "/cordova-plugin-dns",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cordova-plugin-dns",
+    "name": "cordova-plugin-dns",
+    "escapedName": "cordova-plugin-dns",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-dns/-/cordova-plugin-dns-1.0.2.tgz",
+  "_shasum": "4ffc01d3b3c0e879fa9e4921edf22c6f6f306671",
+  "_spec": "cordova-plugin-dns",
+  "_where": "/Users/kwame/Desktop/cicoB",
+  "author": {
+    "name": "Zegeba AS"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-dns",
+    "platforms": [
+      "android",
+      "ios",
+      "browser"
+    ]
+  },
+  "deprecated": false,
+  "description": "Manually resolve DNS hostnames to IPs for diagnosing network setup.",
+  "homepage": "https://bitbucket.org/zegeba/cordova-plugin-dns#readme",
+  "keywords": [
+    "dns",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "cordova-browser"
+  ],
+  "license": "Apache 2.0",
+  "name": "cordova-plugin-dns",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/zegeba/cordova-plugin-dns.git"
+  },
+  "version": "1.0.2"
+}

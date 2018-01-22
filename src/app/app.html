@@ -1,0 +1,23 @@
+<ion-menu side="left" [content]="content">
+<ion-content padding>
+
+	<img (click)="openHome()" class="logMenu" src="assets/img/logo.png" menuClose>
+    <h4 (click)="openHome()" menuClose>Accueil</h4>
+    <h4 (click)="openWhy()" menuClose>Notre philosophie</h4>
+    <h4 (click)="openResult()" menuClose>Accéder à vos résultats</h4>
+    <br/>
+    <h6 (click)="openCGU()" menuClose>Condition général d'utilisation</h6>
+    <h6 (click)="openML()" menuClose>Mentions légales</h6>
+    <h6 (click)="openCDP()" menuClose>Charte de protection des données</h6>
+
+    <p class="droit">Tous droits réservés Ciconia SAS 2017-2018</p>
+
+</ion-content>
+
+
+
+
+
+
+</ion-menu>
+<ion-nav [root]="rootPage" #content ></ion-nav>

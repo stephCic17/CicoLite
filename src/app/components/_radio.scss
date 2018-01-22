@@ -1,0 +1,57 @@
+
+.radio {
+	cursor:pointer;
+	display:inline-block;
+	margin-bottom: 10px;
+  font-family: "Open Sans";
+  border: 1px dashed #bababa;
+  border-radius: 3px;
+  padding: 5px 10px;
+	input {
+		display:none;
+	}
+  &--large {
+    width: 92%;
+    margin: 0 auto 10px auto;
+  }
+	&:focus,
+	&:active{
+		outline:0px solid $green;
+	}
+	label{
+		cursor:pointer;
+		display:inline-block;
+		position: relative;
+		padding-left:30px;
+		padding-right:10px;
+		margin-bottom:0;
+		line-height: 21px;
+		font-weight: 400;
+		&:before,
+		&:after{
+			content:'';
+			font-family: helvetica;
+			display:inline-block;
+			width:18px;
+			height:18px;
+			left:0;
+			top:0px;
+			text-align:center;
+			position: absolute;
+			transition: all .3s ease-in-out;
+			border-radius: 100%;
+		}
+		
+	}
+		
+}
+.radios {
+	cursor:pointer;
+	display:inline-block;
+	margin-bottom: 10px;
+  font-family: "Open Sans";
+  border: 1px dashed #bababa;
+  border-radius: 3px;
+  padding: 5px 10px;
+  width:80%;
+}
